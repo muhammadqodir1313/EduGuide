@@ -292,10 +292,10 @@ export const subjectDirectionMapping: { [key: string]: string[] } = {
 
 // Yo'nalish bo'yicha kerakli fanlar
 export const directionSubjectMapping: { [key: string]: string[] } = {
-  "60610100": ["1", "2", "7"], // Kompyuter injiniringi
-  "60610200": ["1", "2", "7"], // Axborot xavfsizligi
-  "60610300": ["1", "2", "7"], // Dasturiy injiniring
-  "60310100": ["1", "5", "7", "9"], // Iqtisodiyot
-  "60910100": ["2", "3", "4"], // Tibbiyot
-  "60230100": ["5", "6", "7", "9", "10"] // Xalqaro munosabatlar
+  "60610100": ["1", "2"], // Kompyuter injiniringi
+  "60610200": ["1", "2"], // Axborot xavfsizligi
+  "60610300": ["1", "2"], // Dasturiy injiniring
+  "60310100": ["1","7"], // Iqtisodiyot
+  "60910100": [ "3", "4"], // Tibbiyot
+  "60230100": ["1", "7"] // Xalqaro munosabatlar
 };
