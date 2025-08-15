@@ -75,7 +75,7 @@ export const directions: Direction[] = [
     careerPaths: ['Economist', 'Financial Analyst', 'Business Consultant'],
     careerPathsUz: ['Iqtisodchi', 'Moliyaviy tahlilchi', 'Biznes maslahatchi'],
     averageSalary: 6000000,
-    demandLevel: 'o\'rta'
+    demandLevel: 'orta'
   },
   {
     id: '5',
@@ -113,6 +113,6 @@ export const directions: Direction[] = [
     careerPaths: ['Diplomat', 'International Analyst', 'Foreign Correspondent'],
     careerPathsUz: ['Diplomat', 'Xalqaro tahlilchi', 'Xorijiy muxbir'],
     averageSalary: 7000000,
-    demandLevel: 'o\'rta'
+    demandLevel: 'orta'
   }
 ];

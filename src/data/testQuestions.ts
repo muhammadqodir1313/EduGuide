@@ -19,7 +19,9 @@ export const testQuestions: TestQuestion[] = [
       'Yangi narsalarni yaratish va loyihalash',
       'Biznesni boshqarish va pul ishlash'
     ],
-    category: 'texnik'
+    category: 'texnik',
+    correctAnswer: 1,
+    difficulty: 'oson'
   },
   {
     id: '2',
@@ -39,7 +41,9 @@ export const testQuestions: TestQuestion[] = [
       'Rasm chizish va dizayn qilish',
       'Tadbirlarni rejalashtirish va tashkil qilish'
     ],
-    category: 'texnik'
+    category: 'texnik',
+    correctAnswer: 1,
+    difficulty: 'oson'
   },
   {
     id: '3',
@@ -59,7 +63,9 @@ export const testQuestions: TestQuestion[] = [
       'Ijodiy va badiiy qiyinchiliklar',
       'Biznes va moliyaviy muammolar'
     ],
-    category: 'texnik'
+    category: 'texnik',
+    correctAnswer: 1,
+    difficulty: 'oson'
   },
   {
     id: '4',
@@ -79,7 +85,9 @@ export const testQuestions: TestQuestion[] = [
       'Studiyalar va ijodiy joylar',
       'Korporativ ofislar va biznes markazlar'
     ],
-    category: 'texnik'
+    category: 'texnik',
+    correctAnswer: 1,
+    difficulty: 'oson'
   },
   {
     id: '5',
@@ -99,6 +107,8 @@ export const testQuestions: TestQuestion[] = [
       'Ijodkorlik va o\'ziga xoslikni ifodalash',
       'Moliyaviy muvaffaqiyatga erishish'
     ],
-    category: 'texnik'
+    category: 'texnik',
+    correctAnswer: 1,
+    difficulty: 'oson'
   }
 ];

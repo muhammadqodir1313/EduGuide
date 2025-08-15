@@ -8,10 +8,8 @@ import {
   InformationCircleIcon
 } from '@heroicons/react/24/outline';
 import { 
-  downloadAllData, 
   downloadUniversities, 
   downloadDirections, 
-  downloadAdmissionStats,
   downloadCompleteDataset 
 } from '../utils/dataExport';
 
