@@ -1,12 +1,12 @@
-"homepage":"https://muhammadqodir.github.io/EduGuide",
-repository: {
+{
+"homepage": "https://muhammadqodir.github.io/EduGuide",
+"repository": {
   "type": "git",
   "url": "https://github.com/muhammadqodir1313/EduGuide.git"
-},
-license: "MIT",
-{
-  "description": "A modern educational platform for students and educators",
-  "keywords": [
+}, 
+"license": "MIT",
+"description": "A modern educational platform for students and educators",
+"keywords": [
     "education",
     "react",
     "vite",
@@ -20,9 +20,7 @@ license: "MIT",
       "email": "farhodjonovichm1301@gmail.com"
     }
   ],
-}
-{
- "name": "eduguide",
+"name": "eduguide",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -30,7 +28,7 @@ license: "MIT",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
