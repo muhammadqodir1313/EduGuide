@@ -57,7 +57,7 @@ export interface DirectionTable {
   careerPathsUz: string[];
   careerPathsRu?: string[];
   averageSalary: number;
-  demandLevel: 'yuqori' | 'o'rta' | 'past';
+  demandLevel: 'yuqori' | 'orta' | 'past';
   isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -116,7 +116,7 @@ export interface TestQuestionTable {
   explanation?: string;
   explanationUz?: string;
   explanationRu?: string;
-  difficulty: 'oson' | 'o'rta' | 'qiyin';
+  difficulty: 'oson' | 'orta' | 'qiyin';
   topic?: string;
   isActive: boolean;
   createdAt: Date;

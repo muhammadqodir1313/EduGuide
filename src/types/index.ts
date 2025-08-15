@@ -28,7 +28,7 @@ export interface Direction {
   careerPaths: string[];
   careerPathsUz: string[];
   averageSalary: number;
-  demandLevel: 'yuqori' | 'o\'rta' | 'past';
+  demandLevel: 'yuqori' | 'orta' | 'past';
 }
 
 export interface AdmissionStats {
@@ -82,6 +82,6 @@ export interface TestQuestion {
   correctAnswer: number;
   explanation?: string;
   explanationUz?: string;
-  difficulty: 'oson' | 'o'rta' | 'qiyin';
+  difficulty: 'oson' | 'orta' | 'qiyin';
   topic?: string;
 }
