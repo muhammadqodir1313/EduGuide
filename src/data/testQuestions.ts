@@ -3,6 +3,7 @@ import { TestQuestion } from '../types';
 export const testQuestions: TestQuestion[] = [
   {
     id: '1',
+    subjectId: '1',
     question: 'What interests you most?',
     questionUz: 'Sizni eng ko\'p nima qiziqtiradi?',
     options: [
@@ -25,6 +26,7 @@ export const testQuestions: TestQuestion[] = [
   },
   {
     id: '2',
+    subjectId: '1',
     question: 'Which activity do you enjoy most?',
     questionUz: 'Qaysi faoliyat sizga ko\'proq yoqadi?',
     options: [
@@ -47,6 +49,7 @@ export const testQuestions: TestQuestion[] = [
   },
   {
     id: '3',
+    subjectId: '1',
     question: 'What type of problems do you like to solve?',
     questionUz: 'Qanday muammolarni hal qilishni yoqtirasiz?',
     options: [
@@ -69,6 +72,7 @@ export const testQuestions: TestQuestion[] = [
   },
   {
     id: '4',
+    subjectId: '1',
     question: 'Which work environment appeals to you?',
     questionUz: 'Qaysi ish muhiti sizga yoqadi?',
     options: [
@@ -91,6 +95,7 @@ export const testQuestions: TestQuestion[] = [
   },
   {
     id: '5',
+    subjectId: '1',
     question: 'What motivates you most in your career?',
     questionUz: 'Karerangizda sizni eng ko\'p nima motivatsiya qiladi?',
     options: [
