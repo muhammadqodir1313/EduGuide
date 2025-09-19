@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   MagnifyingGlassIcon,
@@ -279,9 +280,9 @@ const Subjects: React.FC = () => {
                   </div>
 
                   {/* Action Button */}
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 sm:py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium text-sm sm:text-base">
+                  <Link to={`/subjects/${subject.id}`} className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 sm:py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium text-sm sm:text-base">
                     Testni boshlash
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}

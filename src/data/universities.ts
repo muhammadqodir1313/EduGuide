@@ -1,64 +1,45 @@
 import { University } from '../types';
+import raw from '../database/uz.json';
 
-export const universities: University[] = [
-  {
-    id: '1',
-    name: 'Tashkent State Technical University',
-    nameUz: 'Toshkent Davlat Texnika Universiteti',
-    location: 'Toshkent',
-    type: 'davlat',
-    established: 1920,
-    website: 'https://tdtu.uz',
-    image: 'https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=800',
-    rating: 4.5,
-    studentsCount: 15000
-  },
-  {
-    id: '2',
-    name: 'Fergana State Technical University',
-    nameUz: 'Farg\'ona Davlat Texnika Universiteti',
-    location: 'Farg\'ona',
-    type: 'davlat',
-    established: 1967,
-    website: 'https://fdtu.uz',
-    image: 'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=800',
-    rating: 4.2,
-    studentsCount: 8000
-  },
-  {
-    id: '3',
-    name: 'National University of Uzbekistan',
-    nameUz: 'O\'zbekiston Milliy Universiteti',
-    location: 'Toshkent',
-    type: 'davlat',
-    established: 1918,
-    website: 'https://nuu.uz',
-    image: 'https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=800',
-    rating: 4.7,
-    studentsCount: 20000
-  },
-  {
-    id: '4',
-    name: 'Tashkent University of Information Technologies',
-    nameUz: 'Toshkent Axborot Texnologiyalari Universiteti',
-    location: 'Toshkent',
-    type: 'davlat',
-    established: 1955,
-    website: 'https://tuit.uz',
-    image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
-    rating: 4.6,
-    studentsCount: 12000
-  },
-  {
-    id: '5',
-    name: 'Samarkand State University',
-    nameUz: 'Samarqand Davlat Universiteti',
-    location: 'Samarqand',
-    type: 'davlat',
-    established: 1927,
-    website: 'https://samdu.uz',
-    image: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=800',
-    rating: 4.3,
-    studentsCount: 18000
+const toAbsoluteUrl = (url: string | null | undefined): string => {
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  return `https://${url}`;
+};
+
+const deriveLocation = (map: string | null | undefined, address: string | null | undefined): string => {
+  if (map && !map.startsWith('http')) return map;
+  if (address) {
+    const parts = address.split(',').map(p => p.trim());
+    const guess = parts.find(p => /(Toshkent|Samarqand|Farg'ona|Andijon|Namangan|Buxoro|Xorazm|Qarshi|Nukus|Jizzax|Sirdaryo|Navoiy)/i.test(p));
+    return guess || parts[0] || 'Toshkent';
   }
-];
+  return 'Toshkent';
+};
+
+const currentYear = new Date().getFullYear();
+
+// Extract universities from imported JSON
+const sourceUniversities: any[] = (raw as any)?.pageProps?.dehydratedState?.queries?.[0]?.state?.data?.data ?? [];
+
+export const universities: University[] = sourceUniversities.map((u: any): University => {
+  const years = Number(u.experience_years_count || 0);
+  const established = years > 0 ? currentYear - years : currentYear;
+  const website = toAbsoluteUrl(u.site);
+  const image = u.logo || u.image || '';
+  const type = (u.type === 'private' ? 'nodavlat' : 'davlat') as University['type'];
+  const location = deriveLocation(u.map, u.address);
+
+  return {
+    id: String(u.id),
+    name: u.name || u.title || 'Universitet',
+    nameUz: u.name || u.title || 'Universitet',
+    location,
+    type,
+    established,
+    website,
+    image,
+    rating: 4.5,
+    studentsCount: Number(u.students_count || 0)
+  };
+});

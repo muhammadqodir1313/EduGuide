@@ -79,14 +79,16 @@ const DirectionCard: React.FC<DirectionCardProps> = ({ direction, university, st
             <CurrencyDollarIcon className="h-4 w-4 mr-1 sm:mr-2 text-yellow-500 flex-shrink-0" />
             <span className="truncate">{(direction.averageSalary / 1000000).toFixed(1)}M so'm</span>
           </div>
-          <div className="flex items-center text-xs sm:text-sm text-gray-600">
-            <ChartBarIcon className="h-4 w-4 mr-1 sm:mr-2 text-purple-500 flex-shrink-0" />
-            <span className="truncate">Kod: {direction.code}</span>
-          </div>
+          {direction.code && (
+            <div className="flex items-center text-xs sm:text-sm text-gray-600">
+              <ChartBarIcon className="h-4 w-4 mr-1 sm:mr-2 text-purple-500 flex-shrink-0" />
+              <span className="truncate">Kod: {direction.code}</span>
+            </div>
+          )}
         </div>
 
         {/* Admission Stats */}
-        {stats && (
+        {stats && (stats.grantPlaces > 0 || stats.contractPlaces > 0 || stats.grantMinScore > 0 || stats.contractMinScore > 0) && (
           <div className="border-t pt-3 sm:pt-4">
             <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">2024-yil qabul statistikasi</h4>
             <div className="grid grid-cols-2 gap-2 sm:gap-4 text-xs">

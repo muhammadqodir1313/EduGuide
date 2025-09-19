@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Bosh sahifa', nameUz: 'Bosh sahifa', href: '/EduGuide' },
+    { name: 'Bosh sahifa', nameUz: 'Bosh sahifa', href: '/' },
     { name: 'Yo\'nalishlar', nameUz: 'Yo\'nalishlar', href: '/directions' },
     { name: 'Universitetlar', nameUz: 'Universitetlar', href: '/universities' },
     { name: 'Fanlar', nameUz: 'Fanlar', href: '/subjects' },
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Logo */}
-          <Link to="/EduGuide" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg sm:text-xl">E</span>
             </div>

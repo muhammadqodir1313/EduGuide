@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -8,6 +8,7 @@ import CareerTest from './pages/CareerTest';
 import Statistics from './pages/Statistics';
 import Subjects from './pages/Subjects';
 import DataExport from './pages/DataExport';
+import SubjectTest from './pages/SubjectTest';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         <Header />
         <main className="flex-grow">
                   <Routes>
-          <Route path="/EduGuide" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/directions" element={<Directions />} />
           <Route path="/universities" element={<Universities />} />
           <Route path="/subjects" element={<Subjects />} />
+          <Route path="/subjects/:id" element={<SubjectTest />} />
           <Route path="/test" element={<CareerTest />} />
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/data-export" element={<DataExport />} />

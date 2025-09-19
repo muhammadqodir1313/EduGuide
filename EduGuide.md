@@ -1,9 +1,9 @@
 
-# Yo'nalishX — Yo‘nalish Tanlashda Yordam Beruvchi Platforma
+# EduGuide — Yo‘nalish Tanlashda Yordam Beruvchi Platforma
 
 ## 📌 Loyiha Tavsifi
 O‘zbekiston yoshlari oliy ta’lim yo‘nalishini tanlashda ko‘plab qiyinchiliklarga duch kelishmoqda. Ular uchun ta’lim yo‘nalishlarining mazmuni, undan keyingi kasbiy faoliyat, real ish imkoniyatlari va o‘tgan yillardagi qabul statistikasi haqida ishonchli va aniq ma’lumotlar mavjud emas.  
-**Yo‘nalishX** platformasi ana shu muammoni bartaraf etish uchun ishlab chiqiladi.
+**EduGuide** platformasi ana shu muammoni bartaraf etish uchun ishlab chiqiladi.
 
 ---
 
@@ -94,12 +94,12 @@ Abituriyentlarga oliy ta’lim yo‘nalishlari, ularning tarkibi, kadrlar chiqis
 ## 📂 Fayl tuzilmasi (versiya 1.0 uchun)
 
 ```
-yonalishX/
+EduGuide/
 ├── frontend/
 ├── backend/
 ├── database/
 ├── docs/
-│   └── yonalishX.md
+│   └── EduGuide.md
 ├── public/
 ├── scripts/
 └── README.md
